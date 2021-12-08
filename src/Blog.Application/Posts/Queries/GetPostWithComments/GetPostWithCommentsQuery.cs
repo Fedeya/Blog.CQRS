@@ -1,4 +1,5 @@
 using AutoMapper;
+using Blog.Application.Common.Exceptions;
 using Blog.Application.Common.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -28,7 +29,7 @@ public class GetPostWithCommentsQueryHandler : IRequestHandler<GetPostWithCommen
 
         if (post == null)
         {
-            throw new Exception("Not found Post");
+            throw new NotFoundException();
         }
 
         await _context.Entry(post)
