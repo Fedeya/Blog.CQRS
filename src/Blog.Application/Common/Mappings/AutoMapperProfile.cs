@@ -6,7 +6,7 @@ using Blog.Application.Posts.Queries.GetPostComments;
 using Blog.Application.Posts.Queries.GetPosts;
 using Blog.Domain.Entities;
 
-namespace Blog.Application.Mappings;
+namespace Blog.Application.Common.Mappings;
 
 public class AutoMapperProfile : Profile
 {
